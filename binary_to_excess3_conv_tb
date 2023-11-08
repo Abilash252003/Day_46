@@ -1,0 +1,31 @@
+///100 Days of RTL///
+
+///Abilash P///
+
+///Binary to excess 3 code///
+
+///4 bits///
+
+module binary_to_excess3_conv_tb ();
+
+reg [3:0] B;
+wire [3:0] E;
+
+
+binary_to_excess3_conv DUT (.B(B), .E(E));
+
+integer i;
+
+initial
+begin
+  for (i=0; i<16; i=i+1)
+    begin
+       B = i;
+       $display ("The Binary Code is = %b, Binary code in decimal = %d", B, B);
+       #20;
+       $display ("The Equivalent Excess 3 code is = %b, Excess 3 code in decimal = %d", E, E);
+    end
+end
+
+endmodule
+   
